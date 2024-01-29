@@ -9,7 +9,7 @@ import {
   doc,
   query,
   orderBy
-  } from " https://www.gstatic.com/firebasejs/10.7.2/ firebase-firestore.js ";
+  } from "https://www.gstatic.com/firebasejs/10.7.2/ firebase-firestore.js ";
 
 
 const firebaseConfig = {
