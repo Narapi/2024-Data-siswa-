@@ -9,7 +9,7 @@ import {
   doc,
   query,
   orderBy
-  } from " https://www.gstatic.com/firebasejs/10.7.2/ firebase-firebsetore.js ";
+  } from " https://www.gstatic.com/firebasejs/10.7.2/ firebase-firestore.js ";
 
 
 const firebaseConfig = {
@@ -34,6 +34,6 @@ export async function ambilDaftarsiswa () {
   querySnapshot.forEach((doc) => {
     retval.push({ id: doc,id, nama: doc.Data().nama });
   });
-  
+
   return retval;
-}
+} 
