@@ -16,16 +16,16 @@
 <body class="m-4">
   <h1>Daftar Siswa</h1>
   
-  <ul id="daftar-siswa"></ul>
+  <ul id="Daftar-Siswa"></ul>
   
   <a href="index.html">Form Tambah Siswa</a>
   
   <script type="module">
-    import { ambilDaftarsiswa   } from "./main.js";
+    import { ambilDaftarSiswa   } from "./main.js";
     
     $(document).ready(async function(){
-     let elemenNamaSiswa = $('#daftar-siswa');
-     let daftarsiswa = ambilDaftarsiswa();
+     let elemenNamaSiswa = $('#Daftar-Siswa');
+     let daftarSiswa = ambilDaftarSiswa();
      
      daftarsiswa.forEach((data) => {
        elemenNamaSiswa.append(
