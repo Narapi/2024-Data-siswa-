@@ -32,7 +32,7 @@ export async function ambilDaftarsiswa () {
   
   let retval = [];
   querySnapshot.forEach((doc) => {
-    retval.push({ id: doc,id, nama: doc.Data().nama });
+    retval.push({ id: doc.id, nama: doc.Data().nama });
   });
 
   return retval;
