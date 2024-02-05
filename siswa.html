@@ -21,11 +21,10 @@
   <a href="index.html">Form Tambah Siswa</a> 
   
   <script type="module">
-    import { ambilDaftarSiswa   } from "./main.js";
-    
+    import { ambilDaftarSiswa } from "./main.js";
     $(document).ready(async function(){
      let elemenNamaSiswa = $('#Daftar-Siswa');
-     let daftarSiswa = ambilDaftarSiswa();
+     let daftarSiswa = await ambilDaftarSiswa();
      
      daftarsiswa.forEach((data) => {
        elemenNamaSiswa.append(
