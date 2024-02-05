@@ -46,3 +46,5 @@ export async function tambahSiswa (nama) {
     console.log('Berhasil menyimpan dokumen dengan lD : '+ docRef,)
      } catch (e) {
       console.log('Error menambah dokumen : ' + e);
+     }
+}
