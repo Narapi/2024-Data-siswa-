@@ -9,7 +9,7 @@ import {
   doc,
   query,
   orderBy
-  } from "https://www.gstatic.com/firebasejs/10.7.2/ firebase-firestore.js ";
+  } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js ";
 
 
 const firebaseConfig = {
@@ -37,3 +37,12 @@ export async function ambilDaftarsiswa () {
 
   return retval;
 } 
+
+export async function tambahSiswa (nama) {
+  try{ 
+    const docRef = await addDoc(collection(db,"siswa"),{
+     nama: val  
+    });
+    console.log('Berhasil menyimpan dokumen dengan lD : '+ docRef,)
+     } catch (e) {
+      console.log('Error menambah dokumen : ' + e);
