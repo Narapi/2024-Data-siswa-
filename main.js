@@ -43,8 +43,8 @@ export async function tambahSiswa (nama) {
     const docRef = await addDoc(collection(db,"siswa"),{
      nama: val  
     });
-    console.log('Berhasil menyimpan dokumen dengan lD : '+ docRef,)
+    console.log('Berhasil menyimpan dokumen dengan lD: '+ docRef.id);
      } catch (e) {
       console.log('Error menambah dokumen : ' + e);
-     }
+ }
 }
