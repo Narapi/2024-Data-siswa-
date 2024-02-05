@@ -5,7 +5,7 @@ import {
   collection,
   addDoc,
   getDocs,
-  deletDoc,
+  deleteDoc,
   doc,
   query,
   orderBy
