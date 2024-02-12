@@ -25,10 +25,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export async function ambilDaftarsiswa () {
+export async function ambilDaftarSiswa () {
   const siswaRef = collection(db,"siswa");
   const q = query(siswaRef, orderBy("nama"));
-  const querysnapshot = await getDocs(q);''
+  const querySnapshot = await getDocs(q);''
 
   let retval = [];
   querySnapshot.forEach((doc) => {
