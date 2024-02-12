@@ -31,14 +31,14 @@
     
     
     <div>
-    <button type="submit" class="btn btn-primary" id="tombol-tambah">Simpan</button> </div>
+    <button type="submit" class="btn btn-primary" id="tambah">Simpan</button> </div>
   </form>
   <a href="siswa.html" class="mt-1"> link Daftar Siswa</a>
   
   <script type="module">
     import { tambahSiswa } from './main.js';
     
-    let tombolTambah = document.getElementByld('tombol-tambah');
+    let tombolTambah = document.getElementById('tambah');
     let elemenNamaSiswa = document.getElementByld('input-nama');
     tombolTambah.addEventListener('click', async function (el) {
       await tambahSiswa(elemenNamaSiswa.value);
