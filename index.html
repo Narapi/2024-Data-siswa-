@@ -26,7 +26,7 @@
     <form class="mb-3">
     <div class="mb-3">
       <label class="form-label">Nama Siswa</label>
-      <input type="text" class="form-control" id="input -nama">
+      <input type="text" class="form-control" id="input">
     </div>
     
     
@@ -39,7 +39,7 @@
     import { tambahSiswa } from './main.js';
     
     let tombolTambah = document.getElementById('tambah');
-    let elemenNamaSiswa = document.getElementByld('input-nama');
+    let elemenNamaSiswa = document.getElementById('input');
     tombolTambah.addEventListener('click', async function (el) {
       await tambahSiswa(elemenNamaSiswa.value);
       window.location.href = 'siswa.html';
