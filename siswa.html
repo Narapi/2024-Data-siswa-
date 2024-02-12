@@ -32,16 +32,23 @@
          data.nama +
          '</label>'+
          '<div>' +
- ' button class="btn btn-danger tombol-hapus" data="'+
+         '<a href="#" class="me-2 link-ubah" data="' +
+         data.id +
+         '">Ubah</a>' +
+ '<button class="btn btn-danger tombol-hapus" data="'+
+        data.id + 
           '">Hapus</button>'+
         '</div>'+
          '</li>'
          );
      });
-     
      $('.tombol-hapus').click(async function() {
    await hapusSiswa($(this).attr('data'));  
    location.reload();
+     })
+     
+    $('.link-ubah').click(async function(){
+  window.location.replace('ubah-siswa.html?docld=' + $(this).attr('data'));
      })
     });
   </script>
