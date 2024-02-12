@@ -40,7 +40,7 @@
     let elemenNamaSiswa = document.getElementById('input-nama');
   const queryString = window.location.search;
   const parameterURL = new URLSearchParams(queryString);
-  const docld = parameterURL.get('docId');
+  const docId = parameterURL.get('docId');
   const siswa = await ambilSiswa(docId);
   
   elemenNamaSiswa.value = siswa.nama;

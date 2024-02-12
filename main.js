@@ -54,12 +54,12 @@ export async function hapusSiswa(docld){
   await deleteDoc(doc(db,"siswa",docld));
 }
 
-export async function ubahSiswa(docld,val) {
-  await updateDoc(doc(db,"siswa",docld),{nama: val});
+export async function ubahSiswa(docId,val) {
+  await updateDoc(doc(db,"siswa",docId),{nama: val});
 }
 
-export async function ambilSiswa (docld) {
-  const docRef = await doc(db,"siswa",docld);
+export async function ambilSiswa (docId) {
+  const docRef = await doc(db,"siswa",docId);
   const docSnap = await getDoc(docRef);
   
   return await docSnap.data();
