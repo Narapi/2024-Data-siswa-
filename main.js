@@ -59,7 +59,7 @@ export async function ubahSiswa(docld,val) {
 }
 
 export async function ambilSiswa (docld) {
-  const docRef = await doc(db, "siswa", dicld);
+  const docRef = await doc(db, "siswa", docld);
   const docSnap = await getDoc(docRef);
   
   return await docSnap.data();
