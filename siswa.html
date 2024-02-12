@@ -23,7 +23,7 @@
     import { ambilDaftarsiswa,hapusSiswa} from "./main.js";
     $(document).ready(async function(){
      let elemenNamaSiswa = $('#Daftar-Siswa');
-     let daftarSiswa = await ambilDaftarSiswa();
+     let daftarSiswa = await ambilDaftarsiswa();
      
      daftarSiswa.forEach((data) => {
        elemenNamaSiswa.append(
@@ -32,11 +32,17 @@
          data.nama +
          '</label>'+
          '<div>' +
-         ' button class="btn btn-danger tombol-hapus">Hapus</button>'+
+ ' button class="btn btn-danger tombol-hapus" data="'+
+          '">Hapus</button>'+
         '</div>'+
          '</li>'
          );
      });
+     
+     $('.tombol-hapus').click(async function() {
+   await hapusSiswa($(this).attr('data'));  
+   location.reload();
+     })
     });
   </script>
 </body>
