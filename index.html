@@ -38,7 +38,7 @@
   <script type="module">
     import { tambahSiswa } from './main.js';
     
-    let tombolTAmbah = document.getElementByld ('tombol-tambah');
+    let tombolTAmbah = document.getElementByld('tombol-tambah');
     let elemenNamaSiswa = document.getElementByld('input-nama');
     tombolTAmbah.addEventListener('click', async function (el) {
       await tambahSiswa(elemenNamaSiswa.value);
