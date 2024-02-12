@@ -37,7 +37,7 @@
     import { ambilSiswa, ubahSiswa } from './main.js';
     
     let tombolubah = document.getElementById('tombol-ubah');
-    let elemenNamaSiswa = document.getElementById('input');
+    let elemenNamaSiswa = document.getElementById('input-nama');
   const queryString = window.location.search;
   const parameterURL = new URLSearchParams(queryString);
   const docld = parameterURL.get('docId');
@@ -45,7 +45,7 @@
   
   elemenNamaSiswa.value = siswa.nama;
   
-    tombolubah.addEventListener('click', async function (el) {
+    tombolUbah.addEventListener('click', async function (el) {
       el.preventDefault();
       await ubahSiswa(docId, elemenNamaSiswa.value);
       window.location.href = 'siswa.html';
