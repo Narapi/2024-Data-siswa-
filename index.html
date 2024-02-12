@@ -26,22 +26,22 @@
     <form class="mb-3">
     <div class="mb-3">
       <label class="form-label">Nama Siswa</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" id="input -nama">
     </div>
     
     
     <div>
-    <button type="submit" class="btn btn-primary">Simpan</button> </div>
+    <button type="submit" class="btn btn-primary" id="tombol-tambah">Simpan</button> </div>
   </form>
   <a href="siswa.html" class="mt-1"> link Daftar Siswa</a>
   
   <script type="module">
     import { tambahSiswa } from './main.js';
     
-    let tomgolTAmbah = document.getElementByld ('tombol-tambah');
+    let tombolTAmbah = document.getElementByld ('tombol-tambah');
     let elemenNamaSiswa = document.getElementByld('input-nama');
-    tomgolTAmbah.addEventListener('click', async function (el) {
-      await tambagSiswa(elemenNamaSiswa.value);
+    tombolTAmbah.addEventListener('click', async function (el) {
+      await tambahSiswa(elemenNamaSiswa.value);
       window.location.href = 'siswa.html';
     });
   </script>
